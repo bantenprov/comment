@@ -11,7 +11,15 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6.4",
-        "illuminate/support": "5.4.*"
+        "illuminate/support": "5.4.*",
+                "illuminate/support": "5.4.*",
+        "bantenprov/comment" : "1.0.0",
+        "bantenprov/member" : "1.0.0",
+        "bantenprov/project" : "1.0.0",
+        "bantenprov/staf" : "1.0.0",
+        "bantenprov/task" : "1.0.0",
+        "laravelcollective/html": "^5.4.0",
+        "that0n3guy/transliteration": "2.0.x"
     },
     "autoload": {
         "files": [
