@@ -2,13 +2,16 @@
     "name": "bantenprov/comment",
     "description": "Repository untuk membuat komentar pada task management",
     "type": "library",
+    "homepage": "https://github.com/bantenprov/comment",
+    "license": "MIT",
     "authors": [
         {
             "name": "bantenprov",
-            "email": "developer.bantenprov@gmail.com"
+            "email": "developer.bantenprov@gmail.com",
+            "homepage": "http://dev.bantenprov",
+            "role": "Developer"
         }
     ],
-    "license": "MIT",
     "require": {
         "php": ">=5.6.4",
         "illuminate/support": "5.4.*",
