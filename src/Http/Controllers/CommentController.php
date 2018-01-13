@@ -103,18 +103,31 @@ class CommentController extends Controller
                 'task' => $task
             ], function($message)
             {
+                
+                foreach($this->userModel->get() as $user)
+                {
+                    $message
+                    ->from(\Auth::user()->email)
+                    ->to($user->email, 'Task Management')
+                    ->subject('Comment');
+                }
                 $message
+                    ->from(\Auth::user()->email)
+                    ->to('eroorsys@gmail.com', 'Task Management')
+                    ->cc('andri.sudarmawijaya@gmail.com')
+                    ->subject('Comment');
+                /*$message
                     ->from('buayaidaman@gmail.com')
                     ->to('eroorsys@gmail.com', 'duke nukem')
                     ->cc('andri.sudarmawijaya@gmail.com')
-                    ->subject('Comment');
+                    ->subject('Comment');*/
             });
 
             return redirect()->back()->with('message','Success send comment');
 
         }else{
             return redirect()->back()
-            ->with('message','File extention not valid')
+            ->withErrors('File extention not valid')
             ->withInput();
         }
     }
@@ -175,6 +188,7 @@ class CommentController extends Controller
             $save = $this->commentRatingModel->create([
                 'user_id' => \Auth::user()->id,
                 'comment_id' => $comment_id,
+                'user_id_comment' => $check_user->user_id,
                 'rating' => $rating
             ]);        
     
