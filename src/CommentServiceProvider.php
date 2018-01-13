@@ -27,7 +27,7 @@ class CommentServiceProvider extends ServiceProvider
     public function boot()
     {
         // Bootstrap handles
-        $this->routeHandle();
+        //$this->routeHandle();
         $this->configHandle();
         $this->langHandle();
         $this->viewHandle();
@@ -118,7 +118,7 @@ class CommentServiceProvider extends ServiceProvider
     {
         $packageViewsPath = __DIR__.'/resources/views';
 
-        $this->loadViewsFrom($packageViewsPath, 'comment');
+        //$this->loadViewsFrom($packageViewsPath, 'comment');
 
         $this->publishes([
             $packageViewsPath => resource_path('views/vendor/comment'),
@@ -152,6 +152,6 @@ class CommentServiceProvider extends ServiceProvider
 
         $this->publishes([
             $packageMigrationsPath => database_path('migrations')
-        ], 'migrations');
+        ], 'comment-migrations');
     }
 }

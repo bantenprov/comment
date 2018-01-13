@@ -17,7 +17,7 @@ class CommentRating extends Model
     
     protected $table = 'comment_ratings';
 
-    protected $fillable = ['user_id','comment_id','rating'];
+    protected $fillable = ['user_id','comment_id','rating','user_id_comment'];
 
     /* Table relation */
 

@@ -15,6 +15,10 @@ class CreateTableCommentRating extends Migration
     {
         Schema::create('comment_ratings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('comment_id');
+            $table->integer('user_id_comment');
+            $table->integer('user_id');
+            $table->integer('rating');
             $table->timestamps();
         });
     }
