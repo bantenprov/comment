@@ -118,7 +118,7 @@ class CommentServiceProvider extends ServiceProvider
     {
         $packageViewsPath = __DIR__.'/resources/views';
 
-        //$this->loadViewsFrom($packageViewsPath, 'comment');
+        $this->loadViewsFrom($packageViewsPath, 'comment');
 
         $this->publishes([
             $packageViewsPath => resource_path('views/vendor/comment'),
