@@ -1,24 +1,33 @@
 {
     "name": "bantenprov/comment",
-    "description": "Repository untuk membuat komentar pada task management",
+    "description": "Profil NPWP Pengguna Aplikasi Pemerintah Provinsi Banten",
     "type": "library",
     "homepage": "https://github.com/bantenprov/comment",
+    "authors": [{
+        "name": "bantenprov",
+        "email": "developer.bantenprov@gmail.com",
+        "role": "developer"
+    }],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "bantenprov",
-            "email": "developer.bantenprov@gmail.com",
-            "homepage": "http://dev.bantenprov",
-            "role": "Developer"
-        }
-    ],
+    "support": {
+      "source": "https://github.com/bantenprov/comment,",
+      "issues": "https://github.com/bantenprov/comment/issues",
+      "wiki": "https://github.com/bantenprov/comment/wiki"
+    },
     "require": {
         "php": ">=5.6.4",
-        "illuminate/support": "5.4.*",
-        "laravelcollective/html": "^5.4.0",
-        "that0n3guy/transliteration": "2.0.x"
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
+        "classmap": [
+            "database"
+        ],
         "files": [
             "src/helpers/helpers.php"
         ],
@@ -26,5 +35,24 @@
             "Bantenprov\\Comment\\": "src"
         }
     },
-    "minimum-stability": "stable"
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
 }
