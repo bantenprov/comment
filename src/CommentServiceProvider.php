@@ -148,7 +148,7 @@ class CommentServiceProvider extends ServiceProvider
     {
         $packageMigrationsPath = __DIR__.'/database/migrations';
 
-        //$this->loadMigrationsFrom($packageMigrationsPath);
+        $this->loadMigrationsFrom($packageMigrationsPath);
 
         $this->publishes([
             $packageMigrationsPath => database_path('migrations')
