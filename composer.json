@@ -1,6 +1,6 @@
 {
     "name": "bantenprov/comment",
-    "description": "Profil NPWP Pengguna Aplikasi Pemerintah Provinsi Banten",
+    "description": "Comment package for task management",
     "type": "library",
     "homepage": "https://github.com/bantenprov/comment",
     "authors": [{
