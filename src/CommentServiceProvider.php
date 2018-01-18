@@ -121,8 +121,8 @@ class CommentServiceProvider extends ServiceProvider
         $this->loadViewsFrom($packageViewsPath, 'comment');
 
         $this->publishes([
-            $packageViewsPath => resource_path('views/vendor/comment'),
-        ], 'views');
+            $packageViewsPath => resource_path('views/vendor'),
+        ], 'comment-views');
     }
 
     /**
@@ -155,3 +155,4 @@ class CommentServiceProvider extends ServiceProvider
         ], 'comment-migrations');
     }
 }
+
