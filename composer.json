@@ -1,6 +1,6 @@
 {
-    "name": "bantenprov/comment",
-    "description": "Repository untuk membuat komentar pada task management",
+"name": "bantenprov/comment",
+    "description": "Comment package for task management",
     "authors": [
         {
             "name": "bantenprov",
@@ -16,7 +16,7 @@
             "src/helpers/helpers.php"
         ],
         "psr-4": {
-            "Bantenprov\\Comment\\": "src"
+             "Bantenprov\\Comment\\": "src"
         }
     },
     "minimum-stability": "stable"
